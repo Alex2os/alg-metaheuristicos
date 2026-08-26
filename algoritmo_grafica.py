@@ -29,9 +29,9 @@ print("x=", mejor_x)
 print("f(x)=", mejor_fitness)
 
 plt.plot(mejores, marker = "o", markersize = 3)
-plt.xlabel("iteracion")
-plt.ylabel("mejor fitness encontrado")
-plt.title("Busqueda aleatoria en f(x) = 5cos(x)+cos(5x)")
+plt.xlabel(f"Iteración")
+plt.ylabel("Mejor fitness encontrado")
+plt.title(f"Búsqueda aleatoria en f(x) = (8sin(x) + sec(2x))^2")
 plt.grid(True)
 
 plt.show()
