@@ -3,7 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def Ob_f(x):
-    return 5 * np.cos(x) + np.cos(5*x)
+    return np.power((8 * np.sin(x) + (1 / np.cos(2*x))), 2)
+
+# 8np.sen(x) + np.sec(2x) al cuadrado 
 
 # hiperparametros
 num_iter = 100
