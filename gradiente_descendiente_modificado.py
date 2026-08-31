@@ -32,8 +32,8 @@ Y = np.array([5,7,9,11,13], dtype = float)
 x1_opt, x2_opt, costo_hist = Gradiente(X, Y, Lr = 0.0002, iter=300)
 
 # hay que escribir con acentos incluso si es en el código
-print(f"Valor óptimo (a): {x1_opt:.4f}")
-print(f"Valor óptimo (b): {x2_opt:.4f}")
+print(f"Valor óptimo (x1): {x1_opt:.4f}")
+print(f"Valor óptimo (x2): {x2_opt:.4f}")
 print(f"Costo final: {costo_hist[-1]:.6f}")
 
 # agregar gráficos
