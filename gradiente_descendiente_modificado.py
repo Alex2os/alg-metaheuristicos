@@ -11,14 +11,14 @@ def Gradiente(x, y, Lr=0.01, iter = 1000):
     historial_costo = []
 
     for i in range(iter):
-        # cambiar funcion objetivo
-        y_pred = x1*x**2 + x2*x + 2 # funcion cuadratica
-        costo = 1 / n * np.sum((y - y_pred)**2) # calculo error cuadratico medio
+        # cambiar función objetivo
+        y_pred = x1*x**2 + x2*x + 2 # función cuadrática
+        costo = 1 / n * np.sum((y - y_pred)**2) # cálculo error cuadrático medio
         historial_costo.append(costo)
 
         # cambiar derivadas
-        x1_derivada = (-2/n) * np.sum(x*(y-y_pred)) # derivadas
-        x2_derivada = (-2/n) * np.sum((y-y_pred))
+        x1_derivada = (-2/n) * np.sum((x**2)*(y-y_pred)) # derivadas
+        x2_derivada = (-2/n) * np.sum(x*(y-y_pred))
         x1 = x1 - Lr * x1_derivada
         x2 = x2 - Lr * x2_derivada
 
@@ -36,7 +36,7 @@ print(f"Valor óptimo (a): {m_opt:.4f}")
 print(f"Valor óptimo (b): {b_opt:.4f}")
 print(f"Costo final: {costo_hist[-1]:.6f}")
 
-# agregar graficos
+# agregar gráficos
 plt.plot(costo_hist, marker = "o", markersize = 3)
 plt.xlabel("Iteraciones")
 plt.ylabel("Costo")
