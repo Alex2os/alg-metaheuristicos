@@ -29,11 +29,11 @@ np.random.seed(42)
 X = np.array([1,2,3,4,5], dtype = float)
 Y = np.array([5,7,9,11,13], dtype = float)
 
-m_opt, b_opt, costo_hist = Gradiente(X, Y, Lr = 0.0002, iter=300)
+x1_opt, x2_opt, costo_hist = Gradiente(X, Y, Lr = 0.0002, iter=300)
 
 # hay que escribir con acentos incluso si es en el código
-print(f"Valor óptimo (a): {m_opt:.4f}")
-print(f"Valor óptimo (b): {b_opt:.4f}")
+print(f"Valor óptimo (a): {x1_opt:.4f}")
+print(f"Valor óptimo (b): {x2_opt:.4f}")
 print(f"Costo final: {costo_hist[-1]:.6f}")
 
 # agregar gráficos
