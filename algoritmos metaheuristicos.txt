@@ -1,0 +1,135 @@
+## Heuristica
+la heuristica como tal es la solucion a un problema dado.
+
+## Metaheuristica
+la metaheuristica se usa para resolver un conjunto de problemas genéricos, por lo que es por esto que es tan utilizada en la programación y la inteligencia artficial.
+por lo tanto, podemos resolver múltiples problemas con esto.
+
+estocástica y probabilidad
+
+## tarea
+instalar python (y sus librerias, depende de cuales usamos, pero numpy, matplotlib y pandas) y matlab
+3 algoritmos de ordenamiento y 3 de búsqueda
+
+no todos los problemas son lineales, algunos son variables, es por esto que no hacemos cálculos matemáticos. por eso usamos algoritmos metaheurísticos, 
+ya que de no usarlos no tendrían solución o sería difícil encontrarla
+
+## 3 partes importantes
+
+para estas partes importantes ver imágenes adjuntas (definiciones matemáticas).
+
+- funcion objetivo: es la función matemática a optimizar. vamos a optimizarla, no a solucionarla.
+- variables de decisión: son variables que nos permiten elegir la solución más óptima.
+- constantes: como siempre las hemos conocido en programación, es una variable que no cambia a lo largo del código. en el caso del código 1, la variable seria-
+el vector y la constante la posición que estamos buscando.
+
+# 1er examen
+a mediados de septiembre o finales de septiembre. depende de que tan bien nos vaya en las practicas
+
+
+# algoritmos de opt. determinista y no determinista
+
+## determinista
+un algoritmo determinista no tiene variaciones. si le das lo mismo, siempre obtendrás lo mismo.
+-> siempre da el mismo resultado
+
+en estos pueden haber:
+- cálculos de ecualización
+- filtros
+- la chicharronera (la formula general)
+
+## no determinista
+-> valores diferentes cada corrida o cada vez.
+
+en estos pueden haber:
+- bogo sort
+- apuestas
+- cuántica
+
+# algoritmo greedy o codicioso
+trata de que el primer resultado que se encuentre lo agarre y se lo quede.
+
+# reportes de practicas
+
+## formato IEEE
+- arial 12
+- 2 columnas
+- sin portada -> importante
+- bibliografia
+- minimo 2 paginas
+
+# algoritmo del gradiente descendente
+
+- un escalar es un valor único que puede ser una constante o una variable
+- un vector es un conjunto de valores que se encuentran juntos, ya sea de forma vertical u horizontal (matriz de elementos)
+- un tensor es un conjunto de matrices
+- una imagen es un tensor, ya que tiene distintas capas como en el caso del formato png (4 capaz, rgb y una para la transparencia)
+
+- un diferencial es la derivada con respecto a una funcion en un momento dado la tangente con respecto a una curva de una funcion
+- un gradiente es la segunda derivada con respecto a una funcion y cada una de sus derivadas parciales. la letra de la derivada parcial se llama jacobiano-
+(el simbolo). ver imagen adjunta
+
+- un rotacional es la 3er derivada con respecto a una funcion. esta no se escribe de la forma convencional (ver foto) sino que se le pone una flecha hacia arriba.
+en este caso no vamos a usar rotacionales tanto. está más enfocado hacia tensores (arreglos de matrices).
+- en el gradiente tenemos que ir sacando la diferencial hasta llegar al punto más bajo de la función. básicamente así es como funciona.
+
+no es bueno usar la búsqueda aleatoria en donde hay millones y millones de soluciones o datos.
+
+## gradiente descendiente 
+el gradiente descendiente funciona con una función de costo. theta es el valor actual (ver foto adjunta)
+
+# termodinamica
+
+## primera ley
+establece que en un sistema cerrado no se puede fugar la energía. es por esto que en un sistema de vacio, un objeto caliente permanecerá caliente.
+
+## segunda ley
+la energia no se crea ni se destruye, sólo se transforma
+
+## calor
+el calor es una forma de energía, siendo partículas en movimiento (vibración). entre más rápido vibre una partícula, más energía cinética tendrá, por lo que más-
+calor tendrá dicho objeto entre más vibraxión o energía cinética.
+
+cuando un cuerpo se encuentra a cierta temperatura, incluso puede llegar a generar brillo. un ejemplo de esto es el brillo infrarrojo.
+
+la luz infrarroja está debajo del color rojo, por lo que nuestro ojo no la puede detectar. podemos sentir sus efectos, pero no verla.
+
+## vibración de los electrones
+
+cuando un electrón se encuentra en la órbita de excitación, tiene que liberar energía de alguna forma. entre una de ellas está el liberar fotones, una partícula de luz.
+después de que libera energía el electrón, vuelve a su estado normal, repitiendo el ciclo de cuando se llena de energía de nuevo.
+
+## rojo-blanco
+esto sucede cuando un metal está tan caliente que se pone de este color. si el material resiste el calor (y se sigue calentando) sigue radiacion ultravioleta,-
+y asi sigue sacando distintos tipos de radiaciones dependiendo el calor.
+
+## Temple Simulado (algoritmo)
+se basa en la técnica de templado de metales.
+
+un cristal es algo cuyos atomos están alineados entre sí (acomodados), como el ruby, diamantes, etc. 
+algunos de estos minerales tienen una forma de forma hexagonal como en forma de barra, que sale del suelo.
+
+un objeto amorfo es aquel el cual no tiene una forma definida.
+
+explorar es buscar mejores soluciones
+
+explotar es después de encontrar un grupo de soluciones, se trata de encontrar la mejor entre ellas.
+
+este algoritmo introdujo la detección de zonas de atascamiento. 
+
+## aceptación probabilística
+nos indica que la partícula, si bien encuentra una opción que le parece que ya es la mejor, puede saltar espontáneamente sin que se lo indiquemos, así añadiendo-
+una probabilidad de que salga de las zonas de atascamiento. así entonces la partícula puede aceptar peores soluciones para a su vez encontrar mejores decisiones-
+a futuro.
+
+este algoritmo puede esquivar objetos, para así seguir buscando.
+
+por lo tanto, al algoritmo de gradiente descendiente podemos añadirle una perturbación a la partícula para que se mueva. el salto que hace la partícula se le-
+llama "salto de levi"
+
+# la siguiente practica será tomar una funcion objetivo y adaptarla al algoritmo
+
+ver fotos adjuntas de la distribución estacionaria de BoltzMann *
+esta distribución es un tipo de las cadenas de Markov
+
+c es una constante o valor para el calor inicial.
