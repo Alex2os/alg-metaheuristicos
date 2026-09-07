@@ -13,7 +13,7 @@ def Rosenbrock(x, y):
     # Sphere return x**2 + y**2
     # Rosenbrock
     return ((1 - x)**2) + 100*((y-x**2)**2)
-    # original (peaks) return  3*(1 - x)**2 * np.exp(-(x**2) - (y + 1)**2) - 10*(x/5 - x**3 - y**5) * np.exp(-x**2 - y**2) - 1/3*np.exp(-(x + 1)**2 - y**2)
+    # Función original (Peaks) return  3*(1 - x)**2 * np.exp(-(x**2) - (y + 1)**2) - 10*(x/5 - x**3 - y**5) * np.exp(-x**2 - y**2) - 1/3*np.exp(-(x + 1)**2 - y**2)
 
 # Función objetivo que toma un vector [x, y]
 def objective_function(position):
