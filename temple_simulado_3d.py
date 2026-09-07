@@ -7,19 +7,18 @@ import matplotlib.pyplot as plt
 # Definición de funciones
 # ---------------------
 
-# Funciones objetivo clásicas
-def peaks(x, y):
-    # himmelblau return ((x**2+y-11)**2) + ((x+y**2 - 7)**2)
-    # sphere return x**2 + y**2
-    # rosenbrock
+# Función objetivo
+def Rosenbrock(x, y):
+    # Himmelblau return ((x**2+y-11)**2) + ((x+y**2 - 7)**2)
+    # Sphere return x**2 + y**2
+    # Rosenbrock
     return ((1 - x)**2) + 100*((y-x**2)**2)
     # original (peaks) return  3*(1 - x)**2 * np.exp(-(x**2) - (y + 1)**2) - 10*(x/5 - x**3 - y**5) * np.exp(-x**2 - y**2) - 1/3*np.exp(-(x + 1)**2 - y**2)
-    # return x**2+y**2
 
 # Función objetivo que toma un vector [x, y]
 def objective_function(position):
     x, y = position
-    return peaks(x, y)  # Minimización
+    return Rosenbrock(x, y)  # Minimización
 
 # Límites del espacio de búsqueda
 lower_bound = np.array([-3, -3])
@@ -90,7 +89,7 @@ best_solution, best_energy, path = simulated_annealing(
 x = np.linspace(lower_bound[0], upper_bound[0], 300)
 y = np.linspace(lower_bound[1], upper_bound[1], 300)
 X, Y = np.meshgrid(x, y)
-Z = peaks(X, Y)
+Z = Rosenbrock(X, Y)
 
 # Convertir trayectoria a arrays
 path = np.array(path)
@@ -119,13 +118,13 @@ plt.xlim(lower_bound[0], upper_bound[0])
 plt.ylim(lower_bound[1], upper_bound[1])
 plt.show()
 
-# figura 3d del recorrido del algoritmo
+# Figura 3D del recorrido del algoritmo
 fig = plt.figure()
 ax = fig.add_subplot(projection = "3d")
 
-ax.plot(px[0], py[0], 'o', color='red', label='Inicio')
 ax.plot(best_solution[0], best_solution[1], 'x', color='cyan', markersize=10, label='Mejor solución')
-ax.plot(px, py, color='blue', linestyle='-', linewidth=2, label='Trayectoria')
+ax.plot(px[0], py[0], 'o', color='red', label='Inicio')
+ax.plot(px, py, color='purple', linestyle='-', linewidth=2, label='Trayectoria')
 
 ax.set_xlabel("Coordenada X")
 ax.set_ylabel("Coordenada Y")
