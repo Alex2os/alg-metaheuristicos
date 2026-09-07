@@ -5,6 +5,8 @@ la heuristica como tal es la solucion a un problema dado.
 la metaheuristica se usa para resolver un conjunto de problemas genéricos, por lo que es por esto que es tan utilizada en la programación y la inteligencia artficial.
 por lo tanto, podemos resolver múltiples problemas con esto.
 
+tanto la heurística como la metaheurística viene en el examen
+
 estocástica y probabilidad
 
 ## tarea
@@ -133,3 +135,75 @@ ver fotos adjuntas de la distribución estacionaria de BoltzMann *
 esta distribución es un tipo de las cadenas de Markov
 
 c es una constante o valor para el calor inicial.
+
+# algoritmo de evolución diferencial (Differential Evolution)
+
+un algoritmo genético se basa en la combinación de genes 
+
+dentro de la evolución, las especies se recombinan con el objetivo de sobrevivir, por lo que los que tienen mejores adaptaciones sobreviven.
+
+## teoría darwiniana o teoría de darwin
+
+se le llama teoría porque un experimento para esto sería demasiado largo, teniendo que hacer un experimento con un animal a lo largo de miles de años para comprobar esta teoría.
+
+las plantas crecen más rápido con música clásica por las armonías.
+
+se le llama differential evolution por una muestra testigo y una muestra que va evolucionando conforme va el algoritmo.
+
+el algoritmo de evolución diferencial es un método de optimización numérica que busca la mejor solución a un problema matemático mejorando iterativamente
+una población de soluciones candidatas mediante operaciones inspiradas en la evolución biológica. (viene en el examen) no utiliza el gradiente descendente.
+
+este algoritmo empieza con una solución aleatoria de vectores dentro de los límites permitidos del programa. todas estas son soluciones candidatas.
+
+tenemos 4 fases del algoritmo:
+
+### inicialización
+población de vectores aleatorios UD (uniformemente distribuidos). lo ideal es que la matriz sea cuadrada.
+
+### mutante
+combinación aleatoria de vectores usando diferencias vectoriales para crear un vector mutante. se multiplica el vector por un número aleatorio de 0 a 1. si se busca que sea más grande son valores de 0 a 2 (inclusivos).
+
+### cruce o crossover
+mezcla de los parametros del vector mutante con los del vector original (vector de prueba). básicamente consiste en un promediado de todos los vectores (ver foto adjunta)
+
+### selección
+hay distintos tipos de selección, aleatoria, elitista, por torneo, etc. se evalúa la calidad de las soluciones mediante una función objetivo. si es mejor, la reemplaza. aquí se puede hacer la selección que se quiera. 
+
+### forma matemática
+se puede representar de forma matemática las 4 fases del algoritmo (ver imágenes adjuntas).
+
+dependiendo de las dimensiones será la cantidad de vectores. si son 3 dimensiones, son 3 vectores, si son 100 dimensiones son 100 vectores.
+la constante F es el valor de mutación. básicamente nos permite hacer la mutación.
+
+el crossover puede ser por promediado o selección aleatoria. en los algoritmos más sencillos se usa la selección aleatoria, pero nosotros haremos uno con promediado.
+
+CR = crossover rate. básicamente es igual que la probabilidad de aceptación del temple simulado.
+
+dentro de los criterios de selección tenemos:
+
+1- DE, Random, Bin, que es por selección binaria (investigarlos). con esto tiende a ser un algoritmo más rápido, pero tiende a quedarse atascado en óptimos locales.
+
+2- DE, Best, 1, Bin, aquí seleccionamos la mejor de dos comparativas. en este caso se usa la estrategia greedy, por lo que se atasca aún más que el anterior.
+
+3- DE, Current-to-best, 1, Bin, hace comparativas del actual al mejor y así avanzar un poco más fácil, evitando mejor los óptimos locales, así avanzando a una mejor solución.
+
+tenemos la definición matemática de los criterios de selección a continuación (ver imagen adjunta).
+
+este es un algoritmo es bastante eficiente, necesitando pocas líneas de código en comparación a otros, pero tiene su chiste.
+
+pso (particle swarm optimization), optimización por enjambre de partículas en español.
+
+## ventajas y limitaciones
+
+### ventajas
+es un algoritmo relativamente fácil de implementar. la idea principal es fácil de entender para escribir el código en cualquier lenguaje.
+es bastante robusto. es difícil que se le meta ruido al algoritmo, si es que le entra es porque se tiene muy mala suerte o porque el algoritmo está mal programado.
+se puede reacomodar a sí mismo, para que se ajuste a lo que necesitamos, haciendo una reducción gradual del valor F, valor de escalabilidad.
+se puede paralelizar el algoritmo.
+
+### limitaciones
+depende mucho de sus hiperparámetros, al quitarle un poco se nota una gran diferencia, por lo que hay que seleccionarlos de una forma correcta, de lo contrario no convergerá o caerá en óptimos locales.
+es muy sensible a los rotacionales. los rotacionales pueden ocasionar que la respuesta sea distinta a lo que queremos. un rotacional es la cruza binomial (investigar).
+en altas dimensiones, tiene un costo computacional muy alto. en dimensiones mayores a 100, lo único que se logra es que el cpu se atasque. con dimensiones menores es rápido o tiene un rendimiento normal.
+
+# traer de tarea algoritmo de evolución diferencial. la idea no es hacer el algoritmo, se puede encontrar en internet y ya traerlo. función objetivo a libre elección, el profe recomienda la función de sphere. modificaremos el algoritmo en clase, por lo que hay que comprender el código.
